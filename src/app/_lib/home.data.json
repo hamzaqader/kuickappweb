@@ -1,0 +1,114 @@
+{
+  "id": 1,
+  "title": "Home Page",
+  "slug": "home",
+  "components": [
+    {
+      "__component": "editorial.banner",
+      "backgroundImage": "/assets/banners/home-banner.png",
+      "tagText": "Solutions We Provide",
+      "title": "App ready in hours, not endless sprints!",
+      "description": "With KuickApp, simplify your development journey. Use drag-and-drop tools, pre-built templates, and smart integrations to launch fully functional apps—without writing a single line of code.",
+      "ctas": [
+        {
+          "title": "Contact Us",
+          "variant": "btn-primary",
+          "size": "btn-large",
+          "classname": "w-full sm:w-auto"
+        },
+        {
+          "title": "Request A Demo",
+          "variant": "btn-secondary",
+          "size": "btn-large",
+          "classname": "w-full sm:w-auto"
+        }
+      ]
+    },
+    {
+      "__component": "editorial.single.column",
+      "tagline": "Why KuickApp?",
+      "title": "Revolutionize the Way You Build and Operate",
+      "description": "Say goodbye to outdated systems. With KuickApp, create powerful apps, automate workflows, and drive real impact in hours — not months. It's time to transform your business, your way.",
+      "image": {
+        "url": "/assets/images/pak-oxygen-building.png",
+        "alt": "Drag and drop app builder UI",
+        "width": 500,
+        "height": 300,
+        "position": {
+          "left": "-50px",
+          "bottom": "-20px"
+        }
+      },
+      "ctas": [
+        {
+          "title": "Start Building",
+          "variant": "btn-primary",
+          "size": "btn-large"
+        }
+      ]
+    },
+    {
+      "__component": "editorial.image.carousel",
+      "images": [
+        {
+          "url": "/assets/images/friesland-logo.png",
+          "alt": "Empower your business",
+          "width": 191,
+          "height": 100
+        },
+        {
+          "url": "/assets/images/pakoxygen-logo.png",
+          "alt": "Empower your business",
+          "width": 191,
+          "height": 100
+        },
+        {
+          "url": "/assets/images/intlindustry-logo.png",
+          "alt": "Empower your business",
+          "width": 191,
+          "height": 100
+        },
+        {
+          "url": "/assets/images/crescent-logo.png",
+          "alt": "Empower your business",
+          "width": 191,
+          "height": 100
+        },
+        {
+          "url": "/assets/images/crescent-logo.png",
+          "alt": "Empower your business",
+          "width": 191,
+          "height": 100
+        },
+        {
+          "url": "/assets/images/crescent-logo.png",
+          "alt": "Empower your business",
+          "width": 191,
+          "height": 100
+        }
+       
+      ]
+    },
+    {
+      "__component": "testimonials"
+    },
+    {
+      "__component": "faq",
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "What is KuickApp?",
+          "answer": "KuickApp is a no-code platform that helps you build fully functional web apps in hours instead of weeks."
+        },
+        {
+          "question": "Do I need to know how to code?",
+          "answer": "No coding is required! KuickApp offers a drag-and-drop interface with pre-built logic and templates."
+        },
+        {
+          "question": "Is there a free trial available?",
+          "answer": "Yes, you can get started with a 14-day free trial without entering credit card details."
+        }
+      ]
+    }
+  ]
+}
