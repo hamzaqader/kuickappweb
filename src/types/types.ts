@@ -39,6 +39,10 @@ export interface IEditorialBanner {
   title: string;
   description: string;
   ctas: EditorialButton[];
+  staticImages: {
+    src: string;
+    alt: string;
+  }[];
 }
 
 export interface IEditorialSingleColumnData {
@@ -61,4 +65,124 @@ export interface IFaq {
 
 export interface IEditorialImageCarouselProps {
   images: EditorialImage[];
+}
+
+export interface IEditorialHero {
+  tagText?: string;
+  title: string;
+  titleHighlights?: string[];
+  description: string;
+  image: {
+    url: string;
+    alt: string;
+    width: number;
+    height: number;
+    position?: string;
+  };
+  ctas: EditorialButton[];
+}
+
+export interface FeatureItem {
+  title: string;
+  description: string;
+  image: {
+    url: string;
+    alt: string;
+    width: number;
+    height: number;
+  };
+}
+
+export interface IFeatures {
+  tagline?: string;
+  title: string;
+  subtitle?: string;
+  features: FeatureItem[];
+  ctas?: EditorialButton[];
+}
+
+export interface StandOutFeature {
+  title: string;
+  description: string;
+}
+
+export interface StandOutBenefit {
+  icon: string;
+  title: string;
+  description: string;
+  backgroundColor: string;
+}
+
+export interface IKuickAppStandsOut {
+  title: string;
+  subtitle: string;
+  features: StandOutFeature[];
+  benefits: StandOutBenefit[];
+}
+
+export interface TestimonialItem {
+  companyName: string;
+  quote: string;
+  avatar?: string;
+}
+
+export interface ITestimonials {
+  title: string;
+  subtitle: string;
+  userAvatars: string[];
+  testimonials: TestimonialItem[];
+}
+
+export interface StatisticItem {
+  number: string;
+  label: string;
+}
+
+export interface IStatistics {
+  stats: StatisticItem[];
+}
+
+export interface IAboutHero {
+  tagText?: string;
+  title: string;
+  description: string;
+  image: {
+    url: string;
+    alt: string;
+    width: number;
+    height: number;
+  };
+  ctas: EditorialButton[];
+}
+
+export interface AboutFeatureItem {
+  icon: string;
+  title: string;
+  description: string;
+  backgroundColor?: string;
+}
+
+export interface IAboutFeatures {
+  title?: string;
+  subtitle?: string;
+  features: AboutFeatureItem[];
+}
+
+export interface CapabilityItem {
+  title: string;
+  description: string;
+}
+
+export interface CapabilityTestimonial {
+  companyName: string;
+  companyLogo?: string;
+  quote: string;
+  authorName: string;
+  authorTitle: string;
+}
+
+export interface ICapabilities {
+  title?: string;
+  capabilities: CapabilityItem[];
+  testimonial?: CapabilityTestimonial;
 }

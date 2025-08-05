@@ -1,26 +1,204 @@
+
 {
   "id": 1,
-  "title": "Home Page",
-  "slug": "home",
-  "components": [
+    "title": "Home Page",
+    "slug": "home",
+    "components": [
+      {
+        "__component": "editorial.banner",
+        "backgroundImage": "/assets/banners/home-banner.png",
+        "tagText": "Low Code/ No Code App Builder",
+        "title": "App ready in hours, not endless sprints!",
+        "description": "With KuickApp, simplify your development journey. Use drag-and-drop tools, pre-built templates, and smart integrations to launch fully functional apps—without writing a single line of code.",
+        "staticImages": [
+          {
+            "src": "/assets/images/workflow.svg",
+            "alt": "workflow"
+          },
+          {
+            "src": "/assets/images/Dragndrop.svg", 
+            "alt": "drag"
+          },
+          {
+            "src": "/assets/images/integration.svg",
+            "alt": "Integration"
+          }
+        ],
+        "ctas": [
+          {
+            "title": "Contact Us",
+            "variant": "btn-primary",
+            "size": "btn-large",
+            "classname": "w-full sm:w-auto"
+          },
+          {
+            "title": "Request A Demo",
+            "variant": "btn-secondary",
+            "size": "btn-large",
+            "classname": "w-full sm:w-auto"
+          }
+        ]
+      },
+      {
+        "__component": "editorial.image.carousel",
+        "images": [
+          {
+            "url": "/assets/images/friesland-logo.png",
+            "alt": "Friesland Logo",
+            "width": 191,
+            "height": 100
+          },
+          {
+            "url": "/assets/images/pakoxygen-logo.png",
+            "alt": "Pak Oxygen Logo",
+            "width": 191,
+            "height": 100
+          },
+          {
+            "url": "/assets/images/intlindustry-logo.png",
+            "alt": "International Industry Logo",
+            "width": 191,
+            "height": 100
+          },
+          {
+            "url": "/assets/images/crescent-logo.png",
+            "alt": "Crescent Logo",
+            "width": 191,
+            "height": 100
+          }
+        ]
+      },
     {
-      "__component": "editorial.banner",
-      "backgroundImage": "/assets/banners/home-banner.png",
-      "tagText": "Solutions We Provide",
-      "title": "App ready in hours, not endless sprints!",
-      "description": "With KuickApp, simplify your development journey. Use drag-and-drop tools, pre-built templates, and smart integrations to launch fully functional apps—without writing a single line of code.",
+      "__component": "editorial.hero",
+      "tagText": "Solutions for Every Need",
+      "title": "From Apps to Operations, We Help You to",
+      "titleHighlights": ["Build", "Manage", "Scale"],
+      "description": "Whether it's launching new applications, streamlining internal workflows, or managing complex case systems — our solutions are built for real-world challenges across diverse industries.",
+      "image": {
+        "url": "/assets/images/girl.png",
+        "alt": "Professional woman with tablet",
+        "width": 400,
+        "height": 500,
+        "position": "left"
+      },
       "ctas": [
         {
-          "title": "Contact Us",
+          "title": "Explore Services",
           "variant": "btn-primary",
           "size": "btn-large",
           "classname": "w-full sm:w-auto"
         },
         {
-          "title": "Request A Demo",
+          "title": "Request a Demo",
           "variant": "btn-secondary",
           "size": "btn-large",
           "classname": "w-full sm:w-auto"
+        }
+      ]
+    },
+    {
+      "__component": "features",
+      "title": "Next-Level Features for Next-Level Growth",
+      "subtitle": "Scale faster with tools crafted for efficiency and impact.",
+      "features": [
+        {
+          "title": "Drag n Drop Application Builder",
+          "description": "Build complex apps visually — no code, no hassle. Just drag, drop, and launch.",
+          "image": {
+            "url": "/assets/images/dragndropfeature.svg",
+            "alt": "Drag and Drop Builder",
+            "width": 753,
+            "height": 524
+          }
+        },
+        {
+          "title": "Workflow Automation",
+          "description": "Automate tasks and processes to save time and reduce manual work.",
+          "image": {
+            "url": "/assets/images/workflowFeature.svg",
+            "alt": "Workflow Automation",
+            "width": 544,
+            "height": 507
+          }
+        },
+        {
+          "title": "Reporting & Analytics",
+          "description": "Get real-time insights and visual reports to track and optimize performance.",
+          "image": {
+            "url": "/assets/images/AnalyticsFeature.svg",
+            "alt": "Analytics Dashboard",
+            "width": 544,
+            "height": 548
+          }
+        },
+        {
+          "title": "Advanced Securtiy",
+          "description": "Enterprise-grade protection to keep your data safe and your operations secure.",
+          "image": {
+            "url": "/assets/images/secure.png",
+            "alt": "Security Features",
+            "width": 621,
+            "height": 774
+          }
+        }
+      ],
+      "ctas": [
+        {
+          "title": "Book Now",
+          "variant": "btn-primary",
+          "size": "btn-large",
+          "classname": "w-full sm:w-auto"
+        },
+        {
+          "title": "Request a Demo",
+          "variant": "btn-secondary",
+          "size": "btn-large",
+          "classname": "w-full sm:w-auto"
+        }
+      ]
+    },
+    {
+      "__component": "kuickapp.stands.out",
+      "title": "Why KuickApp Stands Out",
+      "subtitle": "Unleash Your Creativity Without Constraints",
+      "features": [
+        {
+          "title": "Rapid Development",
+          "description": "Convert your concepts into functional apps swiftly using our user-friendly drag-and-drop builder."
+        },
+        {
+          "title": "Unmatched Ease of Use",
+          "description": "No programming skills needed. Our platform is crafted to be accessible to users of all levels."
+        },
+        {
+          "title": "Advanced Apps, Simplified",
+          "description": "Develop complex applications effortlessly, bypassing the complexities of traditional coding."
+        }
+      ],
+      "benefits": [
+        {
+          "icon": "dollar-circle.svg",
+          "title": "Cost Effective",
+          "description": "KuickApp slashes expenses and speeds up delivery — no more bloated budgets or long dev cycles.",
+          "backgroundColor": "bg-pink-50"
+        },
+        {
+          "icon": "building.svg",
+          "title": "Dominate Your Industry",
+          "description": "Track KPIs, optimize workflows, and make smarter decisions with KuickApp's powerful analytics.",
+          "backgroundColor": "bg-yellow-50"
+        },
+        {
+          "icon": "status-up.svg",
+          "title": "Data-Driven Insights",
+          "description": "Harness real-time analytics and customizable dashboards to turn performance into progress.",
+          "backgroundColor": "bg-blue-50"
+        },
+        {
+          "icon": "call-calling.svg",
+          "title": "Exceptional Support",
+          "description": "From onboarding to scaling, our team's got you covered with expert help and personalized training.",
+          "backgroundColor": "bg-green-50"
         }
       ]
     },
@@ -30,10 +208,10 @@
       "title": "Revolutionize the Way You Build and Operate",
       "description": "Say goodbye to outdated systems. With KuickApp, create powerful apps, automate workflows, and drive real impact in hours — not months. It's time to transform your business, your way.",
       "image": {
-        "url": "/assets/images/pak-oxygen-building.png",
+        "url": "/assets/images/pak-oxygen-building.svg",
         "alt": "Drag and drop app builder UI",
-        "width": 500,
-        "height": 300,
+        "width": 608,
+        "height": 502,
         "position": {
           "left": "-50px",
           "bottom": "-20px"
@@ -47,50 +225,34 @@
         }
       ]
     },
+    
     {
-      "__component": "editorial.image.carousel",
-      "images": [
+      "__component": "testimonials",
+      "title": "Trusted by Clients, Loved by Users ❤️",
+      "subtitle": "We're proud to work alongside industry leaders, innovative startups, and global enterprises. Their trust powers our mission to build future-ready solutions.",
+      "userAvatars": [
+        "/assets/images/avatar1.jpg",
+        "/assets/images/avatar2.jpg",
+        "/assets/images/avatar3.jpg"
+      ],
+      "testimonials": [
         {
-          "url": "/assets/images/friesland-logo.png",
-          "alt": "Empower your business",
-          "width": 191,
-          "height": 100
+          "companyName": "Company Name",
+          "quote": "Streamlined workflow to reduce timelines by 3x using KuickApp."
         },
         {
-          "url": "/assets/images/pakoxygen-logo.png",
-          "alt": "Empower your business",
-          "width": 191,
-          "height": 100
+          "companyName": "Company Name",
+          "quote": "Streamlined workflow to reduce timelines by 3x using KuickApp."
         },
         {
-          "url": "/assets/images/intlindustry-logo.png",
-          "alt": "Empower your business",
-          "width": 191,
-          "height": 100
+          "companyName": "Company Name",
+          "quote": "Streamlined workflow to reduce timelines by 3x using KuickApp."
         },
         {
-          "url": "/assets/images/crescent-logo.png",
-          "alt": "Empower your business",
-          "width": 191,
-          "height": 100
-        },
-        {
-          "url": "/assets/images/crescent-logo.png",
-          "alt": "Empower your business",
-          "width": 191,
-          "height": 100
-        },
-        {
-          "url": "/assets/images/crescent-logo.png",
-          "alt": "Empower your business",
-          "width": 191,
-          "height": 100
+          "companyName": "Company Name",
+          "quote": "Streamlined workflow to reduce timelines by 3x using KuickApp."
         }
-       
       ]
-    },
-    {
-      "__component": "testimonials"
     },
     {
       "__component": "faq",

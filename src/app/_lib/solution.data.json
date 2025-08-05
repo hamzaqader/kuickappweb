@@ -1,0 +1,30 @@
+{
+  "id": 2,
+  "title": "Solution Page",
+  "slug": "solution",
+  "components": [
+    {
+      "__component": "solution.hero",
+      "backgroundImage": "/assets/images/SolutionBackground.svg",
+      "tagText": "Solutions We Provide",
+      "title": "Tailored Solutions for Every Industry",
+      "description": "Empower your teams to solve real-world problems with ready-to-use tools for automation, integration, and app development — built to scale with your business.",
+      "leftImage1": "/assets/images/solution1.svg",
+      "leftImage2": "/assets/images/solution2.svg",
+      "ctas": [
+        {
+          "title": "Contact Us",
+          "variant": "btn-primary",
+          "size": "btn-large",
+          "classname": "w-full sm:w-auto"
+        },
+        {
+          "title": "Request a Demo",
+          "variant": "btn-secondary",
+          "size": "btn-large",
+          "classname": "w-full sm:w-auto"
+        }
+      ]
+    }
+  ]
+}

@@ -8,12 +8,17 @@ import { ButtonSize, ButtonVariant } from "@/types/types";
 import { motion, AnimatePresence } from "framer-motion";
 import Icon from "@/components/ui/Icon/Icon";
 
-export default function EditorialHeaderMobile() {
+interface EditorialHeaderMobileProps {
+  onContactClick: () => void;
+  onBookDemoClick: () => void;
+}
+
+export default function EditorialHeaderMobile({ onContactClick, onBookDemoClick }: EditorialHeaderMobileProps) {
   const [open, setOpen] = useState(false);
 
   const navItems = [
     { label: "Home", href: "/" },
-    { label: "Features", href: "/features" },
+    { label: "Features", href: "/solution" },
     { label: "Pricing", href: "/pricing" },
     { label: "About", href: "/about" },
   ];
@@ -23,7 +28,9 @@ export default function EditorialHeaderMobile() {
       <nav className="relative w-full z-50 shadow-md lg:hidden bg-white rounded-xl max-w-[90%] mx-auto mt-[5%]">
         {/* Top bar with logo and toggle */}
         <div className="flex items-center justify-between px-4 py-3">
-          <Image src="/logo.svg" alt="KuickApp logo" width={150} height={30} />
+          <AnchorLink href="/">
+            <Image src="/logo.svg" alt="KuickApp logo" width={150} height={30} />
+          </AnchorLink>
           <Button
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
@@ -59,9 +66,25 @@ export default function EditorialHeaderMobile() {
                 ))}
 
                 <Button
+                  variant={ButtonVariant.BTN_SECONDARY}
+                  size={ButtonSize.BTN_MEDIUM}
+                  className="w-full"
+                  onClick={() => {
+                    onBookDemoClick();
+                    setOpen(false);
+                  }}
+                >
+                  Book Demo
+                </Button>
+
+                <Button
                   variant={ButtonVariant.BTN_PRIMARY}
                   size={ButtonSize.BTN_MEDIUM}
                   className="w-full"
+                  onClick={() => {
+                    onContactClick();
+                    setOpen(false);
+                  }}
                 >
                   Contact Us
                 </Button>

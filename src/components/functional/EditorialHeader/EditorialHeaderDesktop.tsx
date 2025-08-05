@@ -3,7 +3,12 @@ import Button from "@/components/ui/Button/Button";
 import { ButtonSize, ButtonVariant } from "@/types/types";
 import Image from "next/image";
 
-export default function EditorialHeaderDesktop() {
+interface EditorialHeaderDesktopProps {
+  onContactClick: () => void;
+  onBookDemoClick: () => void;
+}
+
+export default function EditorialHeaderDesktop({ onContactClick, onBookDemoClick }: EditorialHeaderDesktopProps) {
   return (
     <header
       className="
@@ -15,34 +20,46 @@ export default function EditorialHeaderDesktop() {
     >
       <div className="rounded-xl bg-white p-4">
         <div className="max-w-screen-xl mx-auto flex items-center justify-between">
-          <Image src="/logo.svg" alt="KuickApp logo" width={200} height={34} />
+          <AnchorLink href="/">
+            <Image src="/logo.svg" alt="KuickApp logo" width={200} height={34} />
+          </AnchorLink>
 
           <nav aria-label="Main navigation">
             <ul className="flex space-x-6 items-center">
               <li>
-                <AnchorLink href="" className="font-light">
+                <AnchorLink href="/" className="font-light">
                   Home
                 </AnchorLink>
               </li>
               <li>
-                <AnchorLink href="" className="font-light">
+                <AnchorLink href="/solution" className="font-light">
                   Features
                 </AnchorLink>
               </li>
               <li>
-                <AnchorLink href="" className="font-light">
+                <AnchorLink href="/pricing" className="font-light">
                   Pricing
                 </AnchorLink>
               </li>
               <li>
-                <AnchorLink href="" className="font-light">
+                <AnchorLink href="/about" className="font-light">
                   About
                 </AnchorLink>
               </li>
               <li>
                 <Button
+                  variant={ButtonVariant.BTN_SECONDARY}
+                  size={ButtonSize.BTN_MEDIUM}
+                  onClick={onBookDemoClick}
+                >
+                  Book Demo
+                </Button>
+              </li>
+              <li>
+                <Button
                   variant={ButtonVariant.BTN_PRIMARY}
                   size={ButtonSize.BTN_MEDIUM}
+                  onClick={onContactClick}
                 >
                   Contact Us
                 </Button>

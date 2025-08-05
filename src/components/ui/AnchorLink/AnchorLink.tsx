@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
+import LoaderLink from "@/components/ui/LoaderLink/LoaderLink";
 import clsx from "clsx";
 
 export type AnchorLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
@@ -37,8 +37,8 @@ export default function AnchorLink({
   }
 
   return (
-    <Link href={href} className={classes} {...props}>
+    <LoaderLink href={href} className={classes} {...props}>
       {children}
-    </Link>
+    </LoaderLink>
   );
 }

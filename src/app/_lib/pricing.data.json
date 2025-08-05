@@ -1,0 +1,135 @@
+{
+  "id": 5,
+  "title": "Pricing Page",
+  "slug": "pricing",
+  "components": [
+    {
+      "__component": "pricing.hero",
+      "specialOffer": "Special Offer",
+      "title": "Flexible Plans to Fit Your Needs",
+      "description": "From startups to enterprises, KuickApp offers scalable, budget-friendly solutions tailored to every stage of your journey. Choose a plan that aligns with your goals and scale effortlessly as you grow."
+    },
+    {
+      "__component": "pricing.plans",
+      "plans": [
+        {
+          "id": 1,
+          "name": "Basic",
+          "price": "Free",
+          "priceSubtext": "Trial",
+          "features": [
+            {
+              "text": "Upto 5 Processes",
+              "included": true
+            },
+            {
+              "text": "Upto 10 Users",
+              "included": true
+            },
+            {
+              "text": "Basic Support",
+              "included": true
+            },
+            {
+              "text": "2GB Storage",
+              "included": true
+            },
+            {
+              "text": "Free For 1 Month",
+              "included": true
+            }
+          ],
+          "cta": {
+            "title": "Subscribe",
+            "variant": "btn-primary",
+            "size": "btn-large",
+            "classname": ""
+          },
+          "highlighted": false
+        },
+        {
+          "id": 2,
+          "name": "Business",
+          "price": "$10.00",
+          "priceSubtext": "User / Month",
+          "features": [
+            {
+              "text": "Upto 15 Processes",
+              "included": true
+            },
+            {
+              "text": "Unlimited Users",
+              "included": true
+            },
+            {
+              "text": "Standard Support",
+              "included": true
+            },
+            {
+              "text": "20GB Storage",
+              "included": true
+            },
+            {
+              "text": "Integration",
+              "included": true
+            },
+            {
+              "text": "API Calls",
+              "included": true
+            }
+          ],
+          "cta": {
+            "title": "Subscribe",
+            "variant": "btn-primary",
+            "size": "btn-large",
+            "classname": ""
+          },
+          "highlighted": true
+        },
+        {
+          "id": 3,
+          "name": "Pro",
+          "price": "Custom",
+          "priceSubtext": "Price",
+          "features": [
+            {
+              "text": "Unlimited Processes",
+              "included": true
+            },
+            {
+              "text": "Unlimited Users",
+              "included": true
+            },
+            {
+              "text": "Priority Support",
+              "included": true
+            },
+            {
+              "text": "Unlimited Storage",
+              "included": true
+            },
+            {
+              "text": "Integration",
+              "included": true
+            },
+            {
+              "text": "API Calls",
+              "included": true
+            },
+            {
+              "text": "On-Premises Deployment",
+              "included": true
+            }
+          ],
+          "cta": {
+            "title": "Subscribe",
+            "variant": "btn-primary",
+            "size": "btn-large",
+            "classname": ""
+          },
+          "highlighted": false
+        }
+      ]
+    }
+  ]
+}

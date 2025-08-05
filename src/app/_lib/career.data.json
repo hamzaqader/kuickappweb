@@ -1,0 +1,105 @@
+{
+  "id": 4,
+  "title": "Career Page",
+  "slug": "career",
+  "components": [
+    {
+      "__component": "career.hero",
+      "title": "Do the work of your life",
+      "subtitle": "Join our team for serial founders.",
+      "description": "With KuickApp, transform your app development process from months to hours. Our low code platform lets you build custom apps quickly using drag-and-drop design, pre-built templates, and seamless integrations. Perfect for streamlining operations and accelerating growth.",
+      "cta": {
+        "title": "See Open Positions",
+        "variant": "btn-primary",
+        "size": "btn-large",
+        "classname": "w-auto"
+      }
+    },
+    {
+      "__component": "office.showcase",
+      "offices": [
+        {
+          "name": "Our Office",
+          "image": "/assets/images/pak-oxygen-building.png",
+          "alt": "KuickApp Main Office Building"
+        },
+        {
+          "name": "Karachi Branch",
+          "image": "/assets/images/pak-oxygen-building.png",
+          "alt": "KuickApp Karachi Branch Office"
+        }
+      ]
+    },
+    {
+      "__component": "job.listings",
+      "departments": ["Engineering", "Sales", "Marketing", "Product", "Operations", "Design"],
+      "locations": ["New York", "San Francisco", "Remote", "Karachi", "Lahore"],
+      "employmentTypes": ["Full-time", "Part-time", "Contract", "Hybrid"],
+      "jobs": [
+        {
+          "id": 1,
+          "title": "Senior Software Engineer",
+          "department": "Engineering",
+          "location": "San Francisco",
+          "employmentType": "Full-time",
+          "description": "Join our engineering team to build scalable web applications",
+          "category": "Engineering"
+        },
+        {
+          "id": 2,
+          "title": "Frontend Developer",
+          "department": "Engineering",
+          "location": "Remote",
+          "employmentType": "Full-time",
+          "description": "Build beautiful user interfaces with React and Next.js",
+          "category": "Engineering"
+        },
+        {
+          "id": 3,
+          "title": "Data Analyst",
+          "department": "Engineering",
+          "location": "New York",
+          "employmentType": "Full-time",
+          "description": "Analyze data to drive business insights and decisions",
+          "category": "Engineering"
+        },
+        {
+          "id": 4,
+          "title": "Sales Manager",
+          "department": "Sales",
+          "location": "New York",
+          "employmentType": "Full-time",
+          "description": "Lead our sales team to drive revenue growth",
+          "category": "Business and Operations"
+        },
+        {
+          "id": 5,
+          "title": "Business Development Representative",
+          "department": "Sales",
+          "location": "Remote",
+          "employmentType": "Full-time",
+          "description": "Generate new business opportunities and partnerships",
+          "category": "Business and Operations"
+        },
+        {
+          "id": 6,
+          "title": "Product Manager",
+          "department": "Product",
+          "location": "San Francisco",
+          "employmentType": "Full-time",
+          "description": "Drive product strategy and roadmap development",
+          "category": "Business and Operations"
+        },
+        {
+          "id": 7,
+          "title": "UX/UI Designer",
+          "department": "Design",
+          "location": "Hybrid",
+          "employmentType": "Full-time",
+          "description": "Create intuitive and beautiful user experiences",
+          "category": "Business and Operations"
+        }
+      ]
+    }
+  ]
+}

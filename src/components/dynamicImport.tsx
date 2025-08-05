@@ -16,16 +16,30 @@ const COMPONENTS: Record<string, any> = {
   editorialbanner: dynamic(
     () => import("@/components/functional/EditorialBanner/EditorialBanner")
   ),
-  editorialsinglecolumn: dynamic(
+  editorialhero: dynamic(
+    () => import("@/components/functional/EditorialHero/EditorialHero")
+  ),
+  features: dynamic(
+    () => import("@/components/functional/Features/Features")
+  ),
+  kuickappstandsout: dynamic(
     () =>
       import(
-        "@/components/functional/EditorialSingleColumn/EditorialSingleColumn"
+        "@/components/functional/KuickAppStandsOut/KuickAppStandsOut"
       )
   ),
   editorialimagecarousel: dynamic(
     () =>
       import(
         "@/components/functional/EditorialImageCarousel/EditorialImageCarousel"
+      )
+  ),
+
+
+  editorialsinglecolumn: dynamic(
+    () =>
+      import(
+        "@/components/functional/EditorialSingleColumn/EditorialSingleColumn"
       )
   ),
   testimonials: dynamic(
@@ -36,6 +50,22 @@ const COMPONENTS: Record<string, any> = {
   ),
   footer: dynamic(() => import("@/components/functional/Footer/Footer")),
   faq: dynamic(() => import("@/components/functional/FAQ/Faq")),
+  statistics: dynamic(() => import("@/components/functional/Statistics/Statistics")),
+  abouthero: dynamic(() => import("@/components/functional/AboutHero/AboutHero")),
+  aboutfeatures: dynamic(() => import("@/components/functional/AboutFeatures/AboutFeatures")),
+  capabilities: dynamic(() => import("@/components/functional/Capabilities/Capabilities")),
+  solutionhero: dynamic(() => import("@/components/functional/SolutionHero/SolutionHero")),
+  bloghero: dynamic(() => import("@/components/functional/BlogHero/BlogHero")),
+  bloglist: dynamic(() => import("@/components/functional/BlogList/BlogList")),
+  blogsidebar: dynamic(() => import("@/components/functional/BlogSidebar/BlogSidebar")),
+  blogcard: dynamic(() => import("@/components/functional/BlogCard/BlogCard")),
+  blogdetail: dynamic(() => import("@/components/functional/BlogDetail/BlogDetail")),
+  careerhero: dynamic(() => import("@/components/functional/CareerHero/CareerHero")),
+  officeshowcase: dynamic(() => import("@/components/functional/OfficeShowcase/OfficeShowcase")),
+  joblistings: dynamic(() => import("@/components/functional/JobListings/JobListings")),
+  jobfilters: dynamic(() => import("@/components/functional/JobFilters/JobFilters")),
+  pricinghero: dynamic(() => import("@/components/functional/PricingHero/PricingHero")),
+  pricingplans: dynamic(() => import("@/components/functional/PricingPlans/PricingPlans")),
 };
 
 type Props = {

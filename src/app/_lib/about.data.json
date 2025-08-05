@@ -1,0 +1,217 @@
+{
+  "id": 2,
+  "title": "About Us Page",
+  "slug": "about",
+  "components": [
+    {
+      "__component": "about.hero",
+      "tagText": "About Kuick App",
+      "title": "Empowering Industries Through Digital Innovation",
+      "description": "We help businesses unlock growth, streamline operations, and lead in the digital era through tailored design, development, and content solutions.",
+      "image": {
+        "url": "/assets/images/locationmap.svg",
+        "alt": "Location Map",
+        "width": 500,
+        "height": 400
+      },
+      "ctas": [
+        {
+          "title": "Contact Us",
+          "variant": "btn-primary",
+          "size": "btn-large",
+          "classname": "w-full sm:w-auto"
+        },
+        {
+          "title": "Request a Demo",
+          "variant": "btn-secondary", 
+          "size": "btn-large",
+          "classname": "w-full sm:w-auto"
+        }
+      ]
+    },
+    {
+      "__component": "statistics",
+      "stats": [
+        {
+          "number": "80",
+          "label": "Team Experts"
+        },
+        {
+          "number": "2012",
+          "label": "In the Industry Since"
+        },
+        {
+          "number": "50+",
+          "label": "Industries Empowered"
+        },
+        {
+          "number": "10+",
+          "label": "Ventures Partners"
+        }
+      ]
+    },
+    {
+      "__component": "about.features",
+      "title": "Why Choose KuickApp",
+      "subtitle": "We bring passion, innovation, and results to every project we undertake",
+      "features": [
+        {
+          "icon": "heart.svg",
+          "title": "Passionate Team",
+          "description": "Our dedicated experts bring creativity and enthusiasm to every project, ensuring exceptional results.",
+          "backgroundColor": "bg-red-50"
+        },
+        {
+          "icon": "flash.svg", 
+          "title": "Lightning Fast",
+          "description": "Rapid development and deployment cycles that get your solutions to market faster than ever.",
+          "backgroundColor": "bg-yellow-50"
+        },
+        {
+          "icon": "flag.svg",
+          "title": "Goal Oriented",
+          "description": "We focus on achieving your business objectives with strategic planning and execution.",
+          "backgroundColor": "bg-blue-50"
+        },
+        {
+          "icon": "shield.svg",
+          "title": "Reliable & Secure",
+          "description": "Enterprise-grade security and reliability you can trust for your critical business operations.",
+          "backgroundColor": "bg-green-50"
+        },
+        {
+          "icon": "rocket.svg",
+          "title": "Innovation First",
+          "description": "Cutting-edge technology and innovative approaches to solve complex business challenges.",
+          "backgroundColor": "bg-purple-50"
+        },
+        {
+          "icon": "users.svg",
+          "title": "Client Focused",
+          "description": "Your success is our priority. We work closely with you to exceed expectations.",
+          "backgroundColor": "bg-indigo-50"
+        },
+        {
+          "icon": "trophy.svg",
+          "title": "Proven Results",
+          "description": "Track record of successful projects and satisfied clients across multiple industries.",
+          "backgroundColor": "bg-orange-50"
+        },
+        {
+          "icon": "support.svg",
+          "title": "24/7 Support",
+          "description": "Round-the-clock support and maintenance to ensure your systems run smoothly.",
+          "backgroundColor": "bg-teal-50"
+        }
+            ]
+    },
+    {
+      "__component": "capabilities",
+      "title": "Capabilities",
+      "capabilities": [
+        {
+          "title": "Visual App Builder",
+          "description": "Create powerful applications with our intuitive drag-and-drop interface. No coding required - just drag, drop, and deploy your ideas into reality."
+        },
+        {
+          "title": "Workflow Automation",
+          "description": "Streamline your business processes with intelligent automation. Set up complex workflows that handle repetitive tasks and boost your team's productivity."
+        },
+        {
+          "title": "Real-Time Analytics",
+          "description": "Get instant insights into your business performance with comprehensive dashboards and real-time reporting capabilities that drive informed decision-making."
+        },
+        {
+          "title": "Seamless Integrations",
+          "description": "Connect effortlessly with your existing tools and platforms. From CRMs to payment gateways, KuickApp works with what you already use."
+        }
+      ],
+      "testimonial": {
+        "companyName": "Pakistan Oxygen",
+        "companyLogo": "/assets/images/pakoxygen-logo.png",
+        "quote": "KuickApp's seamless integrations saved us weeks of development time. We connected our CRM, payment systems, and internal tools without writing a single line of code. Everything just works — it's like they built the platform exactly for us!",
+        "authorName": "Arshad Manzoor",
+        "authorTitle": "Head of Department"
+      }
+    },
+    {
+      "__component": "editorial.image.carousel",
+      "images": [
+        {
+          "url": "/assets/images/friesland-logo.png",
+          "alt": "Friesland Logo",
+          "width": 191,
+          "height": 100
+        },
+        {
+          "url": "/assets/images/pakoxygen-logo.png",
+          "alt": "Pak Oxygen Logo",
+          "width": 191,
+          "height": 100
+        },
+        {
+          "url": "/assets/images/intlindustry-logo.png",
+          "alt": "International Industry Logo",
+          "width": 191,
+          "height": 100
+        },
+        {
+          "url": "/assets/images/crescent-logo.png",
+          "alt": "Crescent Logo",
+          "width": 191,
+          "height": 100
+        }
+      ]
+    },
+    {
+      "__component": "editorial.single.column",
+      "tagline": "Our Mission",
+      "title": "Building the Future of Digital Transformation",
+      "description": "At KuickApp, we believe technology should empower, not complicate. Our mission is to democratize application development, making it accessible to everyone regardless of technical expertise. We're committed to helping businesses of all sizes unlock their digital potential and achieve sustainable growth through innovative, user-friendly solutions.",
+      "image": {
+        "url": "/assets/images/pak-oxygen-building.png",
+        "alt": "KuickApp team collaborating on innovative solutions",
+        "width": 500,
+        "height": 300,
+        "position": {
+          "left": "-50px",
+          "bottom": "-20px"
+        }
+      },
+      "ctas": [
+        {
+          "title": "Join Our Team",
+          "variant": "btn-primary",
+          "size": "btn-large"
+        }
+      ]
+    },
+    {
+      "__component": "faq",
+      "title": "Frequently Asked Questions About Us",
+      "items": [
+        {
+          "question": "What makes KuickApp different from other development platforms?",
+          "answer": "KuickApp combines the power of enterprise-grade features with the simplicity of drag-and-drop functionality. Our unique approach eliminates the complexity of traditional development while maintaining the flexibility and scalability businesses need."
+        },
+        {
+          "question": "How long has KuickApp been in business?",
+          "answer": "We've been pioneering digital transformation solutions since 2012, giving us over a decade of experience in helping businesses streamline their operations and accelerate growth through innovative technology."
+        },
+        {
+          "question": "What industries do you serve?",
+          "answer": "We serve 50+ industries including healthcare, finance, manufacturing, retail, logistics, and more. Our platform is designed to be industry-agnostic, adapting to the unique needs of any business sector."
+        },
+        {
+          "question": "Do you provide ongoing support after implementation?",
+          "answer": "Absolutely! We offer 24/7 support, regular updates, training sessions, and dedicated account management to ensure your success. Our team of 80+ experts is always ready to help you maximize the value of your investment."
+        },
+        {
+          "question": "Can KuickApp integrate with our existing systems?",
+          "answer": "Yes, seamless integration is one of our core strengths. We can connect with your existing CRMs, ERPs, payment gateways, databases, and virtually any system your business relies on, ensuring a smooth transition without disrupting your current workflows."
+        }
+      ]
+    }
+   
+  ]
+}

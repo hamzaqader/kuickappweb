@@ -1,0 +1,337 @@
+.editorial-banner {
+    position: relative;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    
+  }
+  
+  .banner-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+   
+  }
+  
+  .banner-content {
+    width: 100%;
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tag-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+    margin-top: 244px;
+    
+  }
+  
+  .banner-title {
+    font-size: 80px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 2%;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 8px;
+  }
+  
+  .content-row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+
+  .drag-drop-tags {
+    display: flex;
+    gap: 30px;
+    padding-left: 110px;
+    width: 80%;
+  }
+  
+  .tag-drag {
+    background-color: #FFF4DD;
+    color: black;
+    width: 69px;
+    height: 42px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .tag-drop {
+    background-color: #FFF1EF;
+    color: black;
+    width: 69px;
+    height: 42px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transform: rotate(-20deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .tag-deploy {
+    background-color: #EFF9F9;
+    color: black;
+    width: 69px;
+    height: 42px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .content-right {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 24px;
+    padding-right: 16px;
+    /* border: 2px red solid; */
+  }
+  
+     .banner-description {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 160%;
+    letter-spacing: 2%;
+    text-align: left;
+    margin: 0;
+    width: 80%;
+  }
+  
+  .cta-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: left;
+    margin-top: 24px;
+  }
+  
+  .cta-button {
+    width: 100%;
+  }
+  
+  /* Workflow Image Styles */
+  .workflow-image-container {
+    position: absolute;
+    top: 606px;
+    left: 400px;
+    z-index: 10;
+  }
+ 
+  
+  .workflow-image {
+    width: 492px !important;
+    height: 420px !important;
+    opacity: 1;
+    border-radius: 24px;
+    transform: rotate(0deg);
+  }
+  .integration-image-container {
+    display: flex;
+    justify-content: left;
+ 
+    margin-right: 600px;
+    margin-top: -200px;
+  }
+  
+  .integration-image {
+    width: 492px !important;
+    height: 420px !important;
+    opacity: 1;
+    border-radius: 24px;
+    transform: rotate(0deg);
+    
+  }
+  
+  /* Large screens */
+  @media (min-width: 1024px) {
+    .content-row {
+      flex-direction: row;
+    }
+    
+    .content-left {
+      width: 50%;
+    }
+    
+    .content-right {
+      width: 50%;
+    }
+    
+    .cta-container {
+      flex-direction: row;
+    }
+    
+    .cta-button {
+      width: auto;
+    }
+    
+    .images-container {
+      flex-direction: row;
+    }
+  }
+ 
+  
+     /* Responsive image fixes for smaller screens */
+   @media (max-width: 1023px) {
+     .dragndrop-image-container {
+       display: flex;
+       justify-content: center;
+       margin: 2rem auto 1rem;
+       width: 100%;
+       max-width: 400px;
+     }
+     
+     .dragndrop-image {
+       width: 100% !important;
+       height: auto !important;
+       max-width: 400px;
+       border-radius: 24px;
+     }
+     
+     .workflow-image-container {
+       position: relative;
+       top: auto;
+       left: auto;
+       display: flex;
+       justify-content: center;
+       margin: 2rem auto 1rem;
+       width: 100%;
+       max-width: 400px;
+     }
+     
+     .workflow-image {
+       width: 100% !important;
+       height: auto !important;
+       max-width: 400px;
+     }
+     
+     .integration-image-container {
+       position: relative;
+       margin: 1rem auto 2rem;
+       margin-right: auto;
+       margin-top: 1rem;
+       display: flex;
+       justify-content: center;
+       width: 100%;
+       max-width: 400px;
+     }
+     
+     .integration-image {
+       width: 100% !important;
+       height: auto !important;
+       max-width: 400px;
+     }
+   }
+
+   /* Medium screens */
+   @media (max-width: 1023px) and (min-width: 768px) {
+     .editorial-banner {
+       padding: 160px 48px 0;
+     }
+     
+     .banner-content {
+       max-width: 90%;
+     }
+     
+     .dragndrop-image-container {
+       max-width: 450px;
+     }
+     
+     .workflow-image-container {
+       max-width: 450px;
+     }
+     
+     .integration-image-container {
+       max-width: 450px;
+     }
+   }
+   
+   /* Small screens */
+   @media (max-width: 767px) and (min-width: 640px) {
+     .editorial-banner {
+       padding: 144px 32px 0;
+     }
+     
+     .banner-content {
+       max-width: 95%;
+     }
+     
+     .banner-title {
+       font-size: 60px;
+     }
+     
+     .cta-container {
+       flex-direction: row;
+     }
+     
+     .cta-button {
+       width: auto;
+     }
+     
+     .dragndrop-image-container {
+       max-width: 350px;
+     }
+     
+     .workflow-image-container {
+       max-width: 350px;
+     }
+     
+     .integration-image-container {
+       max-width: 350px;
+     }
+   }
+   
+   /* Extra small screens */
+   @media (max-width: 639px) {
+     .editorial-banner {
+       padding: 120px 16px 0;
+     }
+     
+     .banner-content {
+       max-width: 100%;
+     }
+     
+     .banner-title {
+       font-size: 48px;
+     }
+     
+     .tag-container {
+       margin-top: 120px;
+     }
+     
+     .drag-drop-tags {
+       gap: 15px;
+       padding-left: 0;
+       justify-content: center;
+       flex-wrap: wrap;
+     }
+     
+     .dragndrop-image-container {
+       max-width: 300px;
+     }
+     
+     .workflow-image-container {
+       max-width: 300px;
+     }
+     
+     .integration-image-container {
+       max-width: 300px;
+     }
+   }
+  
+ 

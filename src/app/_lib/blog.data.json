@@ -1,0 +1,70 @@
+{
+  "id": 3,
+  "title": "Blog Page",
+  "slug": "blog",
+  "components": [
+    {
+      "__component": "blog.hero",
+      "tagText": "Blogs",
+      "title": "Our ideas and insights on suppliers, vendors, networks, platform, and much more."
+    },
+    {
+      "__component": "blog.list",
+      "categories": ["Latest", "Pakistan HQ", "For Team", "Tech", "Mail", "Inspiration", "Partners", "First Block"],
+      "posts": [
+        {
+          "id": 1,
+          "title": "Effective Acceptance and Commitment Therapy Exercises for Helping Teens Heal and Grow in Addiction Rehab",
+          "description": "Think addiction is a problem only adults struggle with? Think again. Recent reports show that 1 in 8 teenagers abused an illicit substance last year...",
+          "readMoreText": "Read More",
+          "author": {
+            "name": "Giana Vetrows",
+            "title": "Senior Writer"
+          },
+          "tag": "First Block",
+          "category": "First Block",
+          "slug": "effective-acceptance-commitment-therapy-exercises"
+        },
+        {
+          "id": 2,
+          "title": "Top 11 Expert Tips for Choosing the Right Inpatient Addiction Treatment Center for Teens",
+          "description": "Many people are surprised when they discover just how common mental health challenges are. In the United States, about 20% of adults experience some kind of...",
+          "readMoreText": "Read More",
+          "author": {
+            "name": "Giana Vetrows",
+            "title": "Senior Writer"
+          },
+          "tag": "First Block",
+          "category": "First Block",
+          "slug": "expert-tips-choosing-right-inpatient-addiction-treatment"
+        },
+        {
+          "id": 3,
+          "title": "Effective Acceptance and Commitment Therapy Exercises for Helping Teens Heal and Grow in Addiction Rehab",
+          "description": "Think addiction is a problem only adults struggle with? Think again...",
+          "readMoreText": "Read More",
+          "author": {
+            "name": "Giana Vetrows",
+            "title": "Senior Writer"
+          },
+          "tag": "First Block",
+          "category": "Tech",
+          "slug": "effective-acceptance-commitment-therapy-exercises-tech"
+        },
+        {
+          "id": 4,
+          "title": "Effective Acceptance and Commitment Therapy Exercises for Helping Teens Heal and Grow in Addiction Rehab",
+          "description": "Think addiction is a problem only adults struggle with? Think again...",
+          "readMoreText": "Read More",
+          "author": {
+            "name": "Giana Vetrows",
+            "title": "Senior Writer"
+          },
+          "tag": "First Block",
+          "category": "Latest",
+          "slug": "effective-acceptance-commitment-therapy-exercises-latest"
+        }
+      ]
+    }
+  ]
+}
