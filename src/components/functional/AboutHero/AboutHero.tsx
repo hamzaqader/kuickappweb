@@ -7,14 +7,14 @@ export default function AboutHero(props: IAboutHero) {
   const { tagText, title, description, image, ctas } = props;
 
   return (
-    <section className="pt-24 pb-16 px-4 sm:px-8 md:px-12 lg:px-[164px]">
+    <section className="mt-[100px] pt-24 pb-16 px-4 sm:px-8 md:px-12 lg:px-[164px]">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Content Section */}
           <div className="w-full lg:w-1/2 flex flex-col">
             {tagText && (
               <div className="mb-6">
-                <Tag text={tagText} />
+                <Tag>{tagText}</Tag>
               </div>
             )}
             

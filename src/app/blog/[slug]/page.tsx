@@ -1,11 +1,10 @@
 import BlogDetail from '@/components/functional/BlogDetail/BlogDetail';
-import blogData from '@/app/_lib/blog.data.json';
 import { notFound } from 'next/navigation';
 
 interface BlogPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 // Sample blog data with full content

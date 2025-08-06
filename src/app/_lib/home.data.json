@@ -42,14 +42,9 @@
       {
         "__component": "editorial.image.carousel",
         "images": [
+        
           {
-            "url": "/assets/images/friesland-logo.png",
-            "alt": "Friesland Logo",
-            "width": 191,
-            "height": 100
-          },
-          {
-            "url": "/assets/images/pakoxygen-logo.png",
+            "url": "/assets/images/pakoxygen.jpeg",
             "alt": "Pak Oxygen Logo",
             "width": 191,
             "height": 100
@@ -57,6 +52,13 @@
           {
             "url": "/assets/images/intlindustry-logo.png",
             "alt": "International Industry Logo",
+            "width": 191,
+            "height": 100
+          },
+          
+          {
+            "url": "/assets/images/fries.png",
+            "alt": "Friesland Logo",
             "width": 191,
             "height": 100
           },

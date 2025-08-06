@@ -10,6 +10,11 @@ import styles from "./BookDemoModal.module.css";
 import emailjs from '@emailjs/browser';
 import { emailjsConfig, isEmailjsConfigured } from '@/config/emailjs.config';
 
+// Type definition for react-calendar Value - more comprehensive to match library types
+type ValuePiece = Date | null;
+type Range<T> = [T, T];
+type CalendarValue = ValuePiece | Range<ValuePiece>;
+
 interface BookDemoFormData {
   selectedDate: Date | null;
   meetingReason: string;
@@ -23,13 +28,13 @@ interface BookDemoModalProps {
 
 const salesReps = [
   {
-    name: "Dr. Emily Tran",
-    title: "Dr. Emily Tran",
+    name: "Farhan Ashrag",
+    title: "Farhan Ashraf",
     description: "Join our dynamic Business Operations team in vibrant cities like Stockholm and New York. This is a full-time, on-site position where you'll play a crucial role in driving our operational success."
   },
   {
-    name: "Sarah Johnson",
-    title: "Sarah Johnson",
+    name: "Sarah ",
+    title: "Sarah ",
     description: "Experience leadership in our Sales team across major metropolitan areas. This role offers the opportunity to shape our sales strategy and drive revenue growth."
   },
   {
@@ -64,8 +69,21 @@ export default function BookDemoModal({ isOpen, onClose }: BookDemoModalProps) {
 
   const currentRep = salesReps[currentRepIndex];
 
-  const handleDateChange = (date: Date) => {
-    setFormData(prev => ({ ...prev, selectedDate: date }));
+  const handleDateChange = (value: CalendarValue) => {
+    // Handle the CalendarValue type which can be Date, null, or Range<ValuePiece>
+    if (value instanceof Date) {
+      setFormData(prev => ({ ...prev, selectedDate: value }));
+    } else if (Array.isArray(value)) {
+      // Handle date range - use the first date if it exists
+      const firstDate = value[0];
+      if (firstDate instanceof Date) {
+        setFormData(prev => ({ ...prev, selectedDate: firstDate }));
+      } else {
+        setFormData(prev => ({ ...prev, selectedDate: null }));
+      }
+    } else {
+      setFormData(prev => ({ ...prev, selectedDate: null }));
+    }
   };
 
   const handleInputChange = (field: keyof BookDemoFormData, value: string) => {

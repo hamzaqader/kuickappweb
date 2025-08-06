@@ -10,7 +10,7 @@ export default function PricingHero(props: PricingHeroProps) {
   const { specialOffer, title, description } = props;
 
   return (
-    <section className="py-20 px-4 sm:px-8 md:px-12 lg:px-[164px] bg-white text-center">
+    <section className="mt-[100px] py-20 px-4 sm:px-8 md:px-12 lg:px-[164px] bg-white text-center">
       <div className="max-w-4xl mx-auto">
         {/* Special Offer Tag */}
         <div className="flex justify-center mb-8">

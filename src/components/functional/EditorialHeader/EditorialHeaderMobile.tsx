@@ -18,9 +18,11 @@ export default function EditorialHeaderMobile({ onContactClick, onBookDemoClick 
 
   const navItems = [
     { label: "Home", href: "/" },
-    { label: "Features", href: "/solution" },
-    { label: "Pricing", href: "/pricing" },
     { label: "About", href: "/about" },
+    { label: "Solution", href: "/solution" },
+    { label: "Pricing", href: "/pricing" },
+    { label: "Blog", href: "/blog" },
+    { label: "Career", href: "/career" },
   ];
 
   return (

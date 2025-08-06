@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Loader, PageLoader, InlineLoader } from "@/components/ui/Loader/Loader";
+import Loader, { PageLoader, InlineLoader } from "@/components/ui/Loader/Loader";
 import LoaderLink from "@/components/ui/LoaderLink/LoaderLink";
 import { useNavigationWithLoader } from "@/components/providers/PageTransitionProvider";
 import Button from "@/components/ui/Button/Button";

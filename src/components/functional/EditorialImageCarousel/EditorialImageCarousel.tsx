@@ -6,18 +6,6 @@ import { IEditorialImageCarouselProps } from "@/types/types";
 import "swiper/css";
 import Image from "next/image";
 
-// Define the interface for type safety
-interface ImageItem {
-  url: string;
-  alt?: string;
-  width: number;
-  height: number;
-}
-
-interface IEditorialImageCarouselProps {
-  images: ImageItem[];
-}
-
 export default function EditorialImageCarousel({
   images,
 }: IEditorialImageCarouselProps) {
@@ -26,42 +14,48 @@ export default function EditorialImageCarousel({
     return <p>No images available</p>;
   }
 
+  // Duplicate images for smooth infinite loop
+  const duplicatedImages = [...images, ...images];
+
   return (
     <section className="w-full px-4 sm:px-8 md:px-12 lg:px-[164px] py-6">
       <h2 className="text-center mb-[40px]">
         Trusted by 80% of the Fast Growing Industries
       </h2>
       <Swiper
-        modules={[Autoplay]} // Register Autoplay module
+        modules={[Autoplay]}
         autoplay={{
-          delay: 2000, // Delay between slides in ms
-          disableOnInteraction: false, // Continue autoplay after user interaction
+          delay: 2000,
+          disableOnInteraction: false,
         }}
-        speed={1000} // Transition speed in ms
-        spaceBetween={24} // Space between slides
-        loop={true} // Enable infinite loop for continuous sliding
+        speed={800}
+        spaceBetween={24}
+        loop={true}
+        slidesPerView={4}
         breakpoints={{
-          320: { slidesPerView: 2 },
-          640: { slidesPerView: 3 },
-          1024: { slidesPerView: 4 },
-          1280: { slidesPerView: 4 },
+          640: { slidesPerView: 3, spaceBetween: 24 },
+          1024: { slidesPerView: 4, spaceBetween: 24 },
+          1280: { slidesPerView: 4, spaceBetween: 32 },
+          1440: { slidesPerView: 4, spaceBetween: 40 },
+          1920: { slidesPerView: 4, spaceBetween: 48 },
         }}
-        className="justify-center"
+        className="w-full"
       >
-        {images.map((img, idx) => (
+        {duplicatedImages.map((img, idx) => (
           <SwiperSlide
             key={idx}
             className="!h-[140px] !flex !items-center !justify-center"
           >
-            <Image
-              src={img.url}
-              alt={img.alt ?? `carousel image ${idx + 1}`}
-              width={img.width}
-              height={img.height}
-              quality={100}
-              className="object-contain"
-              sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 20vw"
-            />
+            <div className="w-full h-full flex items-center justify-center">
+              <Image
+                src={img.url}
+                alt={img.alt}
+                width={img.width}
+                height={img.height}
+                quality={100}
+                className="object-contain max-w-full max-h-full"
+              />
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
