@@ -74,31 +74,31 @@
           "backgroundColor": "bg-blue-50"
         },
         {
-          "icon": "shield.svg",
+          "icon": "status-up.svg",
           "title": "Reliable & Secure",
           "description": "Enterprise-grade security and reliability you can trust for your critical business operations.",
           "backgroundColor": "bg-green-50"
         },
         {
-          "icon": "rocket.svg",
+          "icon": "medal.svg",
           "title": "Innovation First",
           "description": "Cutting-edge technology and innovative approaches to solve complex business challenges.",
           "backgroundColor": "bg-purple-50"
         },
         {
-          "icon": "users.svg",
+          "icon": "star.svg",
           "title": "Client Focused",
           "description": "Your success is our priority. We work closely with you to exceed expectations.",
           "backgroundColor": "bg-indigo-50"
         },
         {
-          "icon": "trophy.svg",
+          "icon": "like.svg",
           "title": "Proven Results",
           "description": "Track record of successful projects and satisfied clients across multiple industries.",
           "backgroundColor": "bg-orange-50"
         },
         {
-          "icon": "support.svg",
+          "icon": "heart.svg",
           "title": "24/7 Support",
           "description": "Round-the-clock support and maintenance to ensure your systems run smoothly.",
           "backgroundColor": "bg-teal-50"

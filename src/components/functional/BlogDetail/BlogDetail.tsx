@@ -94,7 +94,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
   }
 
   return (
-    <div className="flex max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 py-12 gap-8">
+    <div className="flex max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 py-12 gap-8 mt-[100px]">
       {/* Left Sidebar - Share This Post */}
       <div className="hidden lg:block w-32 flex-shrink-0">
         <div className="sticky top-8">

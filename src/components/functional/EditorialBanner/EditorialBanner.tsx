@@ -1,11 +1,41 @@
+"use client"
 import Image from "next/image";
 import Button from "@/components/ui/Button/Button";
 import Tag from "@/components/ui/Tag/Tag";
 import { IEditorialBanner } from "@/types/types";
+import { useState, useEffect } from "react";
 import "./EditorialBanner.css";
+
+// Custom hook for typing animation with loop
+const useTypingEffect = (text: string, speed: number = 50) => {
+  const [displayedText, setDisplayedText] = useState("");
+  const [isComplete, setIsComplete] = useState(false);
+
+  useEffect(() => {
+    if (displayedText.length < text.length) {
+      const timeout = setTimeout(() => {
+        setDisplayedText(text.slice(0, displayedText.length + 1));
+      }, speed);
+      return () => clearTimeout(timeout);
+    } else {
+      // When typing is complete, wait 2 seconds then restart
+      const restartTimeout = setTimeout(() => {
+        setDisplayedText("");
+        setIsComplete(false);
+      }, 2000);
+      setIsComplete(true);
+      return () => clearTimeout(restartTimeout);
+    }
+  }, [displayedText, text, speed]);
+
+  return { displayedText, isComplete };
+};
 
 export default function EditorialBanner(props: IEditorialBanner) {
   const { backgroundImage, tagText, title, description, ctas, staticImages } = props;
+  
+  // Use the typing effect hook
+  const { displayedText, isComplete } = useTypingEffect(title, 80);
 
   return (
     <section
@@ -19,7 +49,8 @@ export default function EditorialBanner(props: IEditorialBanner) {
           </div>
 
           <h1 className="banner-title">
-            {title}
+            {displayedText}
+            <span className={`typing-cursor ${isComplete ? 'blink' : ''}`}>_</span>
           </h1>
 
           <div className="content-row">

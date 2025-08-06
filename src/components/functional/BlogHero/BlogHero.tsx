@@ -9,7 +9,7 @@ export default function BlogHero(props: BlogHeroProps) {
   const { tagText, title } = props;
 
   return (
-    <section className="py-20 px-4 sm:px-8 md:px-12 lg:px-[164px] bg-white">
+    <section className="mt-[100px] py-20 px-4 sm:px-8 md:px-12 lg:px-[164px] bg-white">
       <div className="max-w-4xl mx-auto text-center">
         {/* Tag */}
         <div className="flex justify-center mb-8">

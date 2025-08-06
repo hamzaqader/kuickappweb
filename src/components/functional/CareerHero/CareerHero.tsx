@@ -12,7 +12,7 @@ export default function CareerHero(props: CareerHeroProps) {
   const { title, subtitle, description, cta } = props;
 
   return (
-    <section className="py-20 px-4 sm:px-8 md:px-12 lg:px-[164px] bg-white text-center">
+    <section className="mt-[100px] py-20 px-4 sm:px-8 md:px-12 lg:px-[164px] bg-white text-center">
       <div className="max-w-4xl mx-auto">
         {/* Main title */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-4">

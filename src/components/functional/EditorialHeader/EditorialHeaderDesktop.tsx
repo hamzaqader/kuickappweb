@@ -32,8 +32,13 @@ export default function EditorialHeaderDesktop({ onContactClick, onBookDemoClick
                 </AnchorLink>
               </li>
               <li>
+                <AnchorLink href="/about" className="font-light">
+                  About
+                </AnchorLink>
+              </li>
+              <li>
                 <AnchorLink href="/solution" className="font-light">
-                  Features
+                  Solution
                 </AnchorLink>
               </li>
               <li>
@@ -42,8 +47,13 @@ export default function EditorialHeaderDesktop({ onContactClick, onBookDemoClick
                 </AnchorLink>
               </li>
               <li>
-                <AnchorLink href="/about" className="font-light">
-                  About
+                <AnchorLink href="/blog" className="font-light">
+                  Blog
+                </AnchorLink>
+              </li>
+              <li>
+                <AnchorLink href="/career" className="font-light">
+                  Career
                 </AnchorLink>
               </li>
               <li>
