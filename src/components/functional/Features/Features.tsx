@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import Button from "@/components/ui/Button/Button";
 import { IFeatures } from "@/types/types";
 import "./Features.css";
+import { motion } from "framer-motion";
 
 export default function Features(props: IFeatures) {
   const { tagline, title, subtitle, features, ctas } = props;
@@ -14,60 +17,154 @@ export default function Features(props: IFeatures) {
     "feature-card-blue" // Advanced Security - light blue
   ];
 
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        staggerChildren: 0.2,
+        delayChildren: 0.3
+      }
+    }
+  };
+
+  const headerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 60, scale: 0.9 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.7
+      }
+    }
+  };
+
+  const gridVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.4
+      }
+    }
+  };
+
   return (
-    <section className="features-section">
+    <motion.section 
+      className="features-section"
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+    >
       <div className="features-container">
         {/* Header */}
-        <div className="features-header">
-          <h2 className="features-title">{title}</h2>
+        <motion.div className="features-header" variants={headerVariants}>
+          <motion.h2 className="features-title" variants={itemVariants}>
+            {title}
+          </motion.h2>
           {subtitle && (
-            <p className="features-subtitle">{subtitle}</p>
+            <motion.p className="features-subtitle" variants={itemVariants}>
+              {subtitle}
+            </motion.p>
           )}
-        </div>
-
+        </motion.div>
 
         {ctas && ctas.length > 0 && (
-          <div className="features-ctas">
+          <motion.div className="features-ctas" variants={itemVariants}>
             {ctas.map((cta, index) => (
-              <Button
+              <motion.div
                 key={index}
-                variant={cta.variant}
-                size={cta.size}
-                className={cta.classname || ""}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ duration: 0.2 }}
               >
-                {cta.title}
-              </Button>
+                <Button
+                  variant={cta.variant}
+                  size={cta.size}
+                  className={cta.classname || ""}
+                >
+                  {cta.title}
+                </Button>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         )}
-        <div className="features-grid">
+
+        <motion.div className="features-grid" variants={gridVariants}>
           {features.map((feature, index) => (
-            <div
+            <motion.div
               key={index}
               className={`feature-card ${cardBackgrounds[index]}`}
+              variants={cardVariants}
+              whileHover={{ 
+                scale: 1.05,
+                y: -10,
+                transition: { duration: 0.3 }
+              }}
+              whileTap={{ scale: 0.98 }}
             >
-       
-              <div className="feature-content">
+              <motion.div 
+                className="feature-content"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
                 <h3 className="feature-title">{feature.title}</h3>
                 <p className="feature-description">{feature.description}</p>
-              </div>
+              </motion.div>
               
-     
-              <div className="feature-image-container">
+              <motion.div 
+                className="feature-image-container"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.7, delay: index * 0.1 + 0.2 }}
+                viewport={{ once: true }}
+                whileHover={{ 
+                  scale: 1.1,
+                  rotate: 5,
+                  transition: { duration: 0.3 }
+                }}
+              >
                 <Image
                   src={feature.image.url}
                   alt={feature.image.alt}
                   width={feature.image.width}
                   height={feature.image.height}
                   className="feature-image"
-                  // sizes="(max-width: 768px) 80vw, (max-width: 1200px) 45vw, 300px"
+                  sizes="(max-width: 767px) 90vw, (max-width: 1023px) 45vw, 300px"
                 />
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           ))}
-        </div>
-
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

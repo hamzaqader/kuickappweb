@@ -4,6 +4,7 @@ import "./globals.css";
 import EditorialHeader from "@/components/functional/EditorialHeader/EditorialHeader";
 import Footer from "@/components/functional/Footer/Footer";
 import PageTransitionProvider from "@/components/providers/PageTransitionProvider";
+import Chatbot from "@/components/ui/Chatbot/Chatbot";
 
 const polySans = localFont({
   src: [
@@ -44,6 +45,7 @@ export default function RootLayout({
         <EditorialHeader />
         {children}
         <Footer />
+        <Chatbot />
       </PageTransitionProvider>
       </body>
     </html>
