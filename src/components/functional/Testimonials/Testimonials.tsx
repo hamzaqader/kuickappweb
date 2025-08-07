@@ -1,26 +1,123 @@
+"use client";
+
 import { ITestimonials } from "@/types/types";
+import { motion } from "framer-motion";
 
 export default function Testimonials(props: ITestimonials) {
   const { title, subtitle, userAvatars, testimonials } = props;
 
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        staggerChildren: 0.2,
+        delayChildren: 0.3
+      }
+    }
+  };
+
+  const headerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 }
+    }
+  };
+
+  const avatarVariants = {
+    hidden: { opacity: 0, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.5 }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 60, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.7
+      }
+    }
+  };
+
+  const gridVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.4
+      }
+    }
+  };
+
   return (
-    <section className="py-16 px-4 sm:px-8 md:px-12 lg:px-[164px] bg-gray-50">
+    <motion.section 
+      className="py-16 px-4 sm:px-8 md:px-12 lg:px-[164px] bg-gray-50"
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+    >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-12 gap-6">
+        <motion.div 
+          className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-12 gap-6"
+          variants={headerVariants}
+        >
           <div className="lg:flex-1">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-gray-900 leading-tight">
+            <motion.h2 
+              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-gray-900 leading-tight"
+              variants={itemVariants}
+            >
               {title}
-            </h2>
-            <p className="text-lg text-gray-600 lg:max-w-2xl leading-relaxed">
+            </motion.h2>
+            <motion.p 
+              className="text-lg text-gray-600 lg:max-w-2xl leading-relaxed"
+              variants={itemVariants}
+            >
               {subtitle}
-            </p>
+            </motion.p>
           </div>
           
           {/* User Avatars */}
-          <div className="flex items-center gap-1 lg:flex-shrink-0">
+          <motion.div 
+            className="flex items-center gap-1 lg:flex-shrink-0"
+            variants={itemVariants}
+          >
             {userAvatars.map((avatar, index) => (
-              <div key={index} className={`relative ${index > 0 ? '-ml-3' : ''}`}>
+              <motion.div 
+                key={index} 
+                className={`relative ${index > 0 ? '-ml-3' : ''}`}
+                variants={avatarVariants}
+                custom={index}
+                whileHover={{ 
+                  scale: 1.2, 
+                  zIndex: 10,
+                  transition: { duration: 0.2 }
+                }}
+              >
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center overflow-hidden border-2 border-white shadow-sm">
                   {avatar ? (
                     <img 
@@ -49,21 +146,40 @@ export default function Testimonials(props: ITestimonials) {
                     </svg>
                   )}
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          variants={gridVariants}
+        >
           {testimonials.map((testimonial, index) => (
-            <div
+            <motion.div
               key={index}
               className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200"
+              variants={cardVariants}
+              whileHover={{ 
+                scale: 1.02,
+                y: -5,
+                transition: { duration: 0.3 }
+              }}
             >
               {/* Company Avatar */}
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center mr-4">
+              <motion.div 
+                className="flex items-center mb-6"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <motion.div 
+                  className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center mr-4"
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.6 }}
+                >
                   {testimonial.avatar ? (
                     <img 
                       src={testimonial.avatar} 
@@ -86,20 +202,26 @@ export default function Testimonials(props: ITestimonials) {
                       />
                     </svg>
                   )}
-                </div>
+                </motion.div>
                 <h3 className="text-lg font-semibold text-gray-900">
                   {testimonial.companyName}
                 </h3>
-              </div>
+              </motion.div>
               
               {/* Quote */}
-              <blockquote className="text-gray-700 text-base leading-relaxed">
+              <motion.blockquote 
+                className="text-gray-700 text-base leading-relaxed"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: index * 0.1 + 0.2 }}
+                viewport={{ once: true }}
+              >
                 "{testimonial.quote}"
-              </blockquote>
-            </div>
+              </motion.blockquote>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

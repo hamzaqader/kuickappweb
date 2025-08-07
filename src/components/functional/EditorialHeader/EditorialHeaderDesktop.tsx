@@ -16,6 +16,7 @@ export default function EditorialHeaderDesktop({ onContactClick, onBookDemoClick
         z-50 w-[80%] md:w-[90%] lg:w-[80%] 
         rounded-xl py-[1px] px-[1px] 
         bg-gradient-to-l from-black/20 to-transparent
+        mb-60
       "
     >
       <div className="rounded-xl bg-white p-4">

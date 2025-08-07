@@ -32,18 +32,20 @@
 
 .features-title {
   font-weight: 600;
-  font-style: Median;
+  font-style: normal;
   font-size: 56px;
-
   line-height: 120%;
-  letter-spacing: 2%;
+  letter-spacing: 0.02em;
   text-align: center;
-  width: 672;
-  height: 106;
-  opacity: 1;
-  margin-bottom: 3%;
-  margin-right: auto;
-  margin-left: auto;
+  max-width: 672px;
+  margin: 0 auto 3% auto;
+}
+
+@media (max-width: 729px) {
+  .features-title {
+    font-size: 1.75rem;
+    max-width: 90%;
+  }
 }
 
 @media (min-width: 640px) {
@@ -60,15 +62,20 @@
 
 .features-subtitle {
   font-weight: 300;
-  font-style: Slim;
+  font-style: normal;
   font-size: 20px;
   line-height: 160%;
-  letter-spacing: 2%;
+  letter-spacing: 0.02em;
   text-align: center;
-  width: 624;
-  height: 14;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 624px;
+  margin: 0 auto;
+}
+
+@media (max-width: 729px) {
+  .features-subtitle {
+    font-size: 1rem;
+    max-width: 90%;
+  }
 }
 
 .features-grid {
@@ -77,17 +84,29 @@
   gap: 1.5rem;
   margin-bottom: 3rem;
 }
-.feature-card {
-  width: 624;
-  height: 771;
-  opacity: 1;
-  padding-left: 10%;
-  padding-top: 10%;
-  border-radius: 30px;
-}
+
 @media (min-width: 768px) {
   .features-grid {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+.feature-card {
+  width: 100%;
+  max-width: 624px;
+  height: auto;
+  min-height: 771px;
+  padding-left: 10%;
+  padding-top: 10%;
+  border-radius: 30px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 729px) {
+  .feature-card {
+    max-width: 100%;
+    padding: 5%;
+    min-height: auto;
   }
 }
 
@@ -113,24 +132,35 @@
 
 .feature-title {
   font-weight: 600;
-  font-style: Median;
+  font-style: normal;
   font-size: 40px;
   line-height: 130%;
-  letter-spacing: 2%;
-  width: 369;
-  height: 80;
-  opacity: 1;
+  letter-spacing: 0.02em;
+  max-width: 369px;
+}
+
+@media (max-width: 729px) {
+  .feature-title {
+    font-size: 1.5rem;
+    max-width: 100%;
+  }
 }
 
 .feature-description {
   font-weight: 300;
   font-size: 24px;
   line-height: 160%;
-  letter-spacing: 2%;
-  width: 490;
-  height: 55;
-  opacity: 1;
+  letter-spacing: 0.02em;
+  max-width: 490px;
   padding-top: 8%;
+}
+
+@media (max-width: 729px) {
+  .feature-description {
+    font-size: 1rem;
+    max-width: 100%;
+    padding-top: 4%;
+  }
 }
 
 .feature-image-container {
@@ -140,7 +170,21 @@
   align-items: flex-end;
 }
 
+@media (max-width: 729px) {
+  .feature-image-container {
+    margin-top: 2rem;
+  }
+}
+
 .feature-image {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 729px) {
+  .feature-image {
+    max-width: 80%;
+  }
 }
 
 .features-ctas {

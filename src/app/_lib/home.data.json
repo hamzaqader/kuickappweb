@@ -9,6 +9,7 @@
         "backgroundImage": "/assets/banners/home-banner.png",
         "tagText": "Low Code/ No Code App Builder",
         "title": "App ready in hours, not endless sprints!",
+        "titleHighlights": ["Drag", "Drop", "Deploy"],
         "description": "With KuickApp, simplify your development journey. Use drag-and-drop tools, pre-built templates, and smart integrations to launch fully functional apps—without writing a single line of code.",
         "staticImages": [
           {
