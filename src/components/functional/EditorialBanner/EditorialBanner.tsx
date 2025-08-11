@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 export default function EditorialBanner(props: IEditorialBanner) {
-  const { backgroundImage, tagText, title, description, ctas } = props;
+  const { backgroundImage, tagText, title, description,ctas} = props;
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
