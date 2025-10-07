@@ -60,7 +60,7 @@ export default function ChatbotModal({ isOpen, onClose }: ChatbotModalProps) {
     setTimeout(() => {
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),
-        text: "Hi I am under development. Hey want to explore KuickApp please email us at support@kuickapp.com",
+        text: "Hi I am under development.Want to explore KuickApp please email us at support@kuickapp.com",
         sender: "bot",
         timestamp: new Date(),
       };

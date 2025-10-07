@@ -19,13 +19,13 @@ export default function EditorialImageCarousel({
 
   return (
     <section className="w-full px-4 sm:px-8 md:px-12 lg:px-[164px] py-6">
-      <h2 className="text-center mb-[40px]">
+      <h1 className="text-center mb-[40px]">
         Trusted by 80% of the Fast Growing Industries
-      </h2>
+      </h1>
       <Swiper
         modules={[Autoplay]}
         autoplay={{
-          delay: 2000,
+          delay: 800,
           disableOnInteraction: false,
         }}
         speed={800}
